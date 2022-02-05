@@ -124,7 +124,7 @@ pihole:
   # -- Configuration for the Ingress
   ingress:
     # -- Generate a Ingress resource
-    enabled: true
+    enabled: false
 
     # -- Specify an ingressClassName
     ingressClassName: nginx
