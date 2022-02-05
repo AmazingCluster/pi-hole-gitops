@@ -1,4 +1,3 @@
-
 pihole:
   # Default values for pihole.
   # This is a YAML-formatted file.
@@ -30,7 +29,7 @@ pihole:
 
   dnsHostPort:
     # -- set this to true to enable dnsHostPort
-    enabled: false
+    enabled: true
     # -- default port for this pod
     port: 53
 
@@ -38,7 +37,7 @@ pihole:
   serviceDns:
 
     # -- deploys a mixed (TCP + UDP) Service instead of separate ones
-    mixedService: false
+    mixedService: true
 
     # -- `spec.type` for the DNS Service
     type: NodePort
@@ -47,7 +46,7 @@ pihole:
     port: 53
 
     # -- Optional node port for the DNS service
-    nodePort: 53
+    nodePort: ""
 
     # -- `spec.externalTrafficPolicy` for the DHCP Service
     externalTrafficPolicy: Local
@@ -282,7 +281,7 @@ pihole:
 
     # -- Add custom dns entries to override the dns resolution. All lines will be added to the pihole dnsmasq configuration.
     customDnsEntries: []
-    # - address=/foo.bar/192.168.178.10
+    - address=/amazing.cluster/192.168.2.31
     # - address=/bar.foo/192.168.178.11
 
     # -- Dnsmasq reads the /etc/hosts file to resolve ips. You can add additional entries if you like
