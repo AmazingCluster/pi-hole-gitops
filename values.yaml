@@ -280,7 +280,7 @@ pihole:
     # - server=/bar.foo/192.168.178.11
 
     # -- Add custom dns entries to override the dns resolution. All lines will be added to the pihole dnsmasq configuration.
-    customDnsEntries: []
+    customDnsEntries:
     - address=/amazing.cluster/192.168.2.31
     # - address=/bar.foo/192.168.178.11
 
