@@ -5,7 +5,7 @@ pihole:
   # Declare variables to be passed into your templates.
 
   # -- The number of replicas
-  replicaCount: 2
+  replicaCount: 1
 
   # -- The `spec.strategyTpye` for updates
   strategyType: RollingUpdate
