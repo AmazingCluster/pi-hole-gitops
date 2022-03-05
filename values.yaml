@@ -40,7 +40,7 @@ pihole:
     mixedService: true
 
     # -- `spec.type` for the DNS Service
-    type: NodePort
+    type: LoadBalancer
 
     # -- The port of the DNS service
     port: 53
@@ -59,7 +59,7 @@ pihole:
     # -- Annotations for the DNS service
     annotations: {}
       # metallb.universe.tf/address-pool: network-services
-      # metallb.universe.tf/allow-shared-ip: pihole-svc
+      metallb.universe.tf/allow-shared-ip: pi-hole-pihole-dns
 
   # -- Configuration for the DHCP service on port 67
   serviceDhcp:
